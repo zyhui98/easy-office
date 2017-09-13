@@ -1,8 +1,8 @@
-package web.easyoffice.cditie.com.controller;
+package com.cditie.easyoffice.web.controller;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import excel.easyoffice.cditie.com.bean.*;
+import com.cditie.easyoffice.excel.bean.*;
 import net.sf.jxls.transformer.XLSTransformer;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import web.easyoffice.cditie.com.App;
+import com.cditie.easyoffice.web.App;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

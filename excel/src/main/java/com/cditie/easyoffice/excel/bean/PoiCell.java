@@ -1,4 +1,4 @@
-package excel.easyoffice.cditie.com.bean;
+package com.cditie.easyoffice.excel.bean;
 
 public interface PoiCell {
 	/**是否合并单元格**/

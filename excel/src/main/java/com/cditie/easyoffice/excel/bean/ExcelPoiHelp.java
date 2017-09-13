@@ -1,4 +1,4 @@
-package excel.easyoffice.cditie.com.bean;
+package com.cditie.easyoffice.excel.bean;
 
 import java.math.BigDecimal;
 import java.util.HashMap;

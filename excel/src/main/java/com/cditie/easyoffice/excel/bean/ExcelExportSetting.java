@@ -1,11 +1,9 @@
-package excel.easyoffice.cditie.com.bean;
+package com.cditie.easyoffice.excel.bean;
 
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 /**
  * excel配置参数类

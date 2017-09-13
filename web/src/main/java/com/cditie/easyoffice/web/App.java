@@ -1,4 +1,4 @@
-package web.easyoffice.cditie.com;
+package com.cditie.easyoffice.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
