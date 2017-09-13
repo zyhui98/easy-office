@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.6.RELEASE</version>
+    </parent>
+    <groupId>easyoffice.cditie.com</groupId>
+    <artifactId>office</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>excel</module>
+        <module>web</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <!-- 定义当前项目的一些属性 -->
+    <properties>
+        <!--<mobanker-framework.version>2.1.7-SNAPSHOT</mobanker-framework.version>-->
+        <!-- 不定义的话，默认使用的永远是当前框架的最新版本，如果定义的话是为降级版本使用，自2.1.6统一管理版本以后，如需降级只需要更改parent节点下的version即可 -->
+        <!-- 当前项目的版本 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.version>4.3.6.RELEASE</spring.version>
+        <junit.version>4.12</junit.version>
+    </properties>
+
+    <!--定义公共依赖-->
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>22.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>2.7</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.16.10</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
+
+
+    <!-- 插件的管理同样符合上面意思，父pom统一定义，子pom文件只管使用,不需要再增加任何版本和配置 -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <verbose>true</verbose>
+                    <encoding>UTF-8</encoding>
+                    <compilerArguments>
+                        <sourcepath>${project.basedir}/src/main/java</sourcepath>
+                        <sourcepath>${project.basedir}/src/main/resources</sourcepath>
+                    </compilerArguments>
+                </configuration>
+            </plugin>
+            <!--这里定义共用的plugin(自己需要的特殊的插件,是每个模块都需要用的,常用的已经在parent中定义好)...-->
+            <!--其中父包中已经定义了常用的编译的插件[基于1.8],测试的配置[默认是跳过，子pom可以重写为false]-->
+            <!--这里重写了父POM里面的maven compiler 的版本为 JDK1.8 -->
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <!--这里定义非共用的plugins (自己需要的特殊的插件，但不是没个moudle(模块)下都要用的，常用的已经在parent中定义好)-->
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
