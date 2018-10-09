@@ -26,7 +26,7 @@ cellList.add(new ExcelMergeCell("日期1","date1"));
 //一行数据的第二个列合并单元格的
 ExcelMergeCell excelMergeCell = new ExcelMergeCell("自动电核笔数","zidonghebishu",
 		Arrays.asList(new ExcelCell("大学贷","daxuedai"),
-				new ExcelCell("手机贷","shoujidai"),
+				new ExcelCell("我贷","wodai"),
 				new ExcelCell("自然贷","zirandai")));
 cellList.add(excelMergeCell);
 
