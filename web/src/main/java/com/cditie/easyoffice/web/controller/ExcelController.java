@@ -56,7 +56,7 @@ public class ExcelController {
 			data0.put("date", "2017-01-01");
 			data0.put("date1", "2017-01-01");
 			Map<String,Object> data1 = Maps.newHashMap();
-			data1.put("shoujidai","100");
+			data1.put("haodai","100");
 			data1.put("daxuedai","100");
 			data1.put("zirandai","100");
 			data0.put("zidonghebishu",data1);
@@ -80,7 +80,7 @@ public class ExcelController {
 			//一行数据的第二个列合并单元格的
 			ExcelMergeCell excelMergeCell = new ExcelMergeCell("自动电核笔数","zidonghebishu",
 					Arrays.asList(new ExcelCell("大学贷","daxuedai"),
-							new ExcelCell("手机贷","shoujidai"),
+							new ExcelCell("好贷","haodai"),
 							new ExcelCell("自然贷","zirandai")));
 			cellList.add(excelMergeCell);
 
