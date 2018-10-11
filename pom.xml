@@ -19,7 +19,6 @@
 
     <!-- 定义当前项目的一些属性 -->
     <properties>
-        <!--<mobanker-framework.version>2.1.7-SNAPSHOT</mobanker-framework.version>-->
         <!-- 不定义的话，默认使用的永远是当前框架的最新版本，如果定义的话是为降级版本使用，自2.1.6统一管理版本以后，如需降级只需要更改parent节点下的version即可 -->
         <!-- 当前项目的版本 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
